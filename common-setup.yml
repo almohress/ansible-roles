@@ -6,3 +6,4 @@
   - reconfig-ssh-server
   - enable-ufw-on-ssh
   - install-s3cmd
+  - install-logrotate
