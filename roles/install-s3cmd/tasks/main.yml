@@ -2,3 +2,11 @@
 - name: Install s3cmd with pip
   pip:
     name: s3cmd==2.2.0
+
+- name: Copy Configuration on /root
+  template:
+    src: s3cfg.j2
+    dest: /root/.s3cfg
+    owner: root
+    group: root
+    mode: '0644'
