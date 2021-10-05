@@ -1,0 +1,18 @@
+---
+- name: Copy Customized logrotate configurations
+  template:
+    src: "{{ item.template }}"
+    dest: /etc/logrotate.d/"{{ item.remote_name }}"
+    owner: root
+    group: root
+    mode: '0644'
+  loop:
+    - { remote_name: 'rsyslog', template: 'rsyslog.j2'}
+    - { remote_name: 'debug', template: 'debug.j2'}
+    - { remote_name: 'messages', template: 'messages.j2'}
+    - { remote_name: 'auth.log', template: 'auth.log.j2'}
+    - { remote_name: 'cron.log', template: 'cron.log.j2'}
+    - { remote_name: 'daemon.log', template: 'daemon.log.j2'}
+    - { remote_name: 'kern.log', template: 'kern.log.j2'}
+    - { remote_name: 'lpr.log', template: 'lpr.log.j2'}
+    - { remote_name: 'user.log', template: 'user.log.j2'}

@@ -1,0 +1,6 @@
+---
+- name: Install logrotate
+  apt:
+    update_cache: true
+    name: logrotate
+    state: present
