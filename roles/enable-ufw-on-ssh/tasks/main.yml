@@ -1,0 +1,3 @@
+---
+- include_tasks: add-ssh-port-rule.yml
+- include_tasks: enable-ufw.yml

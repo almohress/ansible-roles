@@ -1,0 +1,6 @@
+---
+- name: Add ssh Port ufw Rule
+  ufw:
+    rule: allow
+    port: '{{ ansible_port }}'
+    proto: tcp
