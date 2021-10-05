@@ -1,0 +1,8 @@
+---
+- name: Set Default Configuration for ufw
+  copy:
+    src: ufw.default
+    dest: /etc/default/ufw
+    owner: root
+    group: root
+    mode: '0644'
