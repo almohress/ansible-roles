@@ -1,0 +1,7 @@
+---
+- name: Check Required System Packages Installation
+  apt: 
+    name: "{{ item }}"
+    state: latest 
+    update_cache: yes
+  loop: [ 'apt-transport-https', 'ca-certificates', 'curl', 'software-properties-common']

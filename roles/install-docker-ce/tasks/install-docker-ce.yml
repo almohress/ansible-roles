@@ -1,0 +1,7 @@
+---
+- name: Install Docker ce package
+  apt:
+    update_cache: yes
+    name: docker-ce
+    state: latest
+  notify: 

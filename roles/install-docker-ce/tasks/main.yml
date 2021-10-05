@@ -1,0 +1,5 @@
+---
+- include_tasks: required-packages.yml
+- include_tasks: add-docker-gpg.yml
+- include_tasks: add-docker-repository.yml
+- include_tasks: install-docker-ce.yml
