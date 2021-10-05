@@ -1,4 +1,4 @@
 ---
 - name: Configure Minio Client
   shell: |
-    'mc alias set {{ mc_alias_name }} {{ mc_endpoint_url }} {{ mc_access_key }} {{ mc_secret_key }} --api S3v4'
+    'mc alias set {{ mc_alias_name }} {{ mc_endpoint_url }} {{ mc_access_key }} {{ mc_secret_key }}'
