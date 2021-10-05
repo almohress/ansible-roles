@@ -1,0 +1,11 @@
+---
+- name: Purge Docker
+  apt:
+    pkg:
+    - docker
+    - docker-engine
+    - docker.io
+    - containerd
+    - runc
+    state: absent
+    purge: yes
