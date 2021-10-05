@@ -17,7 +17,7 @@ Port {{ ansible_port }}
 #ListenAddress 0.0.0.0
 #ListenAddress ::
 
-AllowUser {{ allowed_users_ssh }}
+AllowUsers {{ allowed_ssh_users }}
 #HostKey /etc/ssh/ssh_host_rsa_key
 #HostKey /etc/ssh/ssh_host_ecdsa_key
 #HostKey /etc/ssh/ssh_host_ed25519_key
