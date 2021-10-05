@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  roles:
+  - install-ufw
+  - reconfig-ssh-server
+  - enable-ufw-on-ssh
+  - install-minio-client
