@@ -1,0 +1,18 @@
+/var/log/lpr.log
+{
+	rotate 4
+	daily
+	missingok
+	notifempty
+	compress
+	sharedscripts
+	postrotate
+		/usr/lib/rsyslog/rsyslog-rotate
+	endscript
+
+	dateext
+	dateformat -%Y-%m-%d-%s
+	lastaction
+			HOSTNAME=`hostname`
+			/usr/local/bin/s3cmd sync /var/log/lpr.log*.gz "s3://{{ s3_bucket_name }}/$HOSTNAME/"
+}
