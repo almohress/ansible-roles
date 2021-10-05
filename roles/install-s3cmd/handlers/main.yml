@@ -1,0 +1,3 @@
+---
+- name: Install s3cmd
+  command: "python3 /tmp/s3cmd-2.2.0/setup.py install"
