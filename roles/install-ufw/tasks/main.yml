@@ -1,7 +1,7 @@
 ---
 - name: Check if ufw is Installed
   apt:
-    update_cache: yes
+    update_cache: true
     name: ufw
     state: present
   notify: Set Default Configuration for ufw
