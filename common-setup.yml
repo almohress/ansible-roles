@@ -5,4 +5,4 @@
   - install-ufw
   - reconfig-ssh-server
   - enable-ufw-on-ssh
-  - install-minio-client
+  - install-s3cmd
