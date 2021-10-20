@@ -1,0 +1,9 @@
+---
+- name: Install Nginx
+  apt:
+    update_cache: true
+    name: nginx
+    state: present
+  notify:
+    - Enable Nginx Service
+    - Allow Nginx on firewall

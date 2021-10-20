@@ -1,0 +1,11 @@
+---
+- name: Enable Nginx Service
+  service:
+    name: nginx.service
+    state: started
+    enabled: true
+
+- name: Allow Nginx on firewall
+  ufw:
+    rule: allow
+    name: Nginx Full
