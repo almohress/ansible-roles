@@ -1,0 +1,5 @@
+---
+- include_tasks: issue-certificate.yml
+- include_tasks: install-grafana-gpg.yml
+- include_tasks: install-grafana.yml
+

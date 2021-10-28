@@ -2,8 +2,10 @@
 - hosts: all
   become: true
   roles:
-  - install-ufw
-  - reconfig-ssh-server
-  - enable-ufw-on-ssh
-  - install-s3cmd
+#  - install-ufw
+#  - reconfig-ssh-server
+#  - enable-ufw-on-ssh
+#  - install-s3cmd
+  - setup-nginx
+#  - setup-prometheus
   - install-logrotate

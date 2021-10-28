@@ -1,0 +1,7 @@
+---
+- name: Generate a Self Signed OpenSSL certificate
+  openssl_certificate:
+    path: /etc/ssl/crt/grafana.example.com.crt
+    privatekey_path: /etc/ssl/private/grafana.example.com.pem
+    csr_path: /etc/ssl/csr/grafana.example.com.csr
+    provider: selfsigned

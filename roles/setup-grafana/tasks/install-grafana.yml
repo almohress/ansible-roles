@@ -1,0 +1,7 @@
+---
+- name: Install Grafana
+  apt:
+    update_cache: true
+    name: grafana
+    state: present
+  notify: 

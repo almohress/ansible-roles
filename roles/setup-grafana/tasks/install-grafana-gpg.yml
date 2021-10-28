@@ -1,0 +1,10 @@
+- name: Add Grafana GPG
+  apt_key:
+    url: https://packages.grafana.com/gpg.key
+    state: present
+
+
+auth.anonym
+enabled: false
+http_addr: localhost
+root_url: https://grafana.example.com

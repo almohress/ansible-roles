@@ -1,0 +1,15 @@
+---
+- name: Enable Prometheus Service
+  service:
+    name: prometheus.service
+    state: started
+    enable: true
+
+- name: Add Prometheus User Credentials
+  htpasswd:
+    path: /etc/nginx/.htpasswd
+    name: "{{ prometheus_auth_user }}"
+    password: "{{ prometheus_auth_passwd }}"
+    owner: root
+    group: www-data
+    mode: 0640

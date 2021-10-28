@@ -1,0 +1,8 @@
+---
+- name: Install Prometheus Package
+  apt:
+    update_cache: true
+    name: prometheus
+    state: present
+  notify:
+    - Enable Prometheus Service

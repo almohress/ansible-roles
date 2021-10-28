@@ -1,0 +1,6 @@
+---
+- name: Install Prometheus Dependencies
+  apt:
+   name: apache2-utils
+   state: present
+  notify: Add Prometheus User Credentials

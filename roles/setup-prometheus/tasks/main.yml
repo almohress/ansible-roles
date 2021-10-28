@@ -1,0 +1,4 @@
+---
+- include_tasks: install-dependencies.yml
+- include_tasks: install-prometheus.yml
+- include_tasks: setup-auth.yml
